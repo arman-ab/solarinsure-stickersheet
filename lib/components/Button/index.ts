@@ -4,6 +4,7 @@ import React from 'react';
 import { createComponent } from '@lit/react';
 
 import styles from './styles.component.scss?inline';
+import globalStyles from '../../globals/scss/index.scss?inline';
 
 const TAG_NAME = 'si-button';
 
@@ -14,7 +15,12 @@ class SIButtonLit extends LitElement {
     @property({ type: Boolean }) link = false;
     @property({ type: Boolean }) icon = false;
 
-    static styles = unsafeCSS(styles);
+    static get styles() {
+        return [
+            unsafeCSS(globalStyles),
+            unsafeCSS(styles)
+        ]
+    }
 
     get buttonClasses() {
         const variantClasses = {
