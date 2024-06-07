@@ -2,7 +2,7 @@ import { SIButton } from '@lib/main'
 
 function App() {
 
-    return <div className="max-w-screen-md mx-auto flex flex-col items-center gap-4">
+    return <div className="max-w-screen-xl mx-auto flex flex-col items-center gap-4">
         <img src="/logo.jpg" alt="Logo" className="w-40"/>
         <div className="grid grid-cols-5 gap-4 p-4">
             <SIButton size="sm">
@@ -66,19 +66,19 @@ function App() {
                 Tertiary 2XL
             </SIButton>
             <SIButton variant="tertiary-gray" size="sm">
-                Tertiary GraySM
+                Tertiary Gray SM
             </SIButton>
             <SIButton variant="tertiary-gray">
-                Tertiary GrayMD
+                Tertiary Gray MD
             </SIButton>
             <SIButton variant="tertiary-gray" size="lg">
-                Tertiary GrayLG
+                Tertiary Gray LG
             </SIButton>
             <SIButton variant="tertiary-gray" size="xl">
-                Tertiary GrayXL
+                Tertiary Gray XL
             </SIButton>
             <SIButton variant="tertiary-gray" size="2xl">
-                Tertiary Gray2XL
+                Tertiary Gray 2XL
             </SIButton>
         </div>
     </div>
