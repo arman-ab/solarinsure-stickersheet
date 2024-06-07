@@ -4,7 +4,7 @@ import React from 'react';
 import { createComponent } from '@lit/react';
 
 import styles from './styles.component.scss?inline';
-import globalStyles from '../../globals/scss/index.scss?inline';
+import globalStyles from '@lib/globals/scss/index.scss?inline';
 
 const TAG_NAME = 'si-button';
 

@@ -6,11 +6,14 @@ import dts from 'vite-plugin-dts'
 import { libInjectCss } from 'vite-plugin-lib-inject-css'
 import { extname, relative, resolve } from 'path'
 import { glob } from 'glob'
+import path from 'path';
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
     plugins: [
         dts({ include: ['lib'] }),
-        libInjectCss()
+        libInjectCss(),
+        react()
     ],
     build: {
         copyPublicDir: false,
@@ -44,6 +47,18 @@ export default defineConfig({
                 }
             }
         }
+    },
+    resolve: {
+        alias: [
+            {
+                find: '@',
+                replacement: path.resolve(__dirname, 'src'),
+            },
+            {
+                find: '@lib',
+                replacement: path.resolve(__dirname, 'lib'),
+            },
+        ],
     },
     css: {
         postcss: {
