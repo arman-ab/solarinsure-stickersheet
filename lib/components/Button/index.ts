@@ -14,6 +14,7 @@ class SIButtonLit extends LitElement {
     @property({ type: String }) size: 'sm' | 'md' | 'lg' | 'xl' | '2xl' = 'md';
     @property({ type: Boolean }) link = false;
     @property({ type: Boolean }) icon = false;
+    @property({ type: String }) class = '';
 
     static get styles() {
         return [
@@ -40,7 +41,7 @@ class SIButtonLit extends LitElement {
         const linkClasses = this.link ? 'btn-link' : '';
         const iconClasses = this.icon ? 'btn-icon' : '';
 
-        return `btn ${variantClasses[this.variant]} ${sizeClasses[this.size]} ${linkClasses} ${iconClasses}`;
+        return `btn ${variantClasses[this.variant]} ${sizeClasses[this.size]} ${linkClasses} ${iconClasses} ${this.class}`;
     }
 
     render() {
